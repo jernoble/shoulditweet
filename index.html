@@ -142,11 +142,8 @@ function transitionEnded(event)
 {
 	var polyhedron = event.target;
 	var answer = polyhedron.querySelector('#answer');
-	if (event.propertyName !== 'opacity')
-		return;
-	if (window.getComputedStyle(polyhedron)[event.propertyName] !== '0')
-		return;
-	answer.innerText = randomAnswer();
+	if (event.propertyName === 'opacity' && window.getComputedStyle(polyhedron)[event.propertyName] === '0')
+		answer.innerText = randomAnswer();
 }
 </script>
 </head>
