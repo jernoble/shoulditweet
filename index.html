@@ -76,14 +76,14 @@ body {
 }
 
 #polyhedron {
-	width: 80%;
-	height: 80%;
+	width: 75%;
+	height: 65%;
+	top: 10%;
 	background-color: rgb(0, 0, 120);
-	-webkit-clip-path: polygon(0% 15%, 100% 15%, 50% 85%);
-	clip-path: polygon(0% 15%, 100% 15%, 50% 85%);;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 	position: relative;
 	color: white;
-	top: 10%;
 	opacity: 1;
 
 	transition-property: transform, color, opacity;
@@ -102,18 +102,19 @@ body {
 	content: "";
 	height: 100%;
 	width: 50%;
+	shape-margin: 6%;
 }
 
 #left {
 	float: left;
-	-webkit-shape-outside: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%, 100% 85%, 100% 100%, 0% 100%);
-	shape-outside: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%, 100% 85%, 100% 100%, 0% 100%);;
+	-webkit-shape-outside: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%, 100% 100%, 100% 100%, 0% 100%);
+	shape-outside: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%, 100% 100%, 100% 100%, 0% 100%);;
 }
 
 #right {
 	float: right;
-	-webkit-shape-outside: polygon(100% 0%, 0% 0%, 0% 15%, 100% 15%, 0% 85%, 0% 100%, 100% 100%);
-	shape-outside:  polygon(100% 0%, 0% 0%, 0% 15%, 100% 15%, 0% 85%, 0% 100%, 100% 100%);;
+	-webkit-shape-outside: polygon(100% 0%, 0% 0%, 0% 0%, 100% 0%, 0% 100%, 0% 100%, 100% 100%);
+	shape-outside:  polygon(100% 0%, 0% 0%, 0% 0%, 100% 0%, 0% 100%, 0% 100%, 100% 100%);;
 }
 
 #answer {
@@ -122,7 +123,8 @@ body {
 	font-variant: small-caps;
 	font-family: sans-serif;
 	position: relative;
-	margin-top: 25%;
+	top: 33%;
+    transform: translate(0, -50%);
 }
 </style>
 <script>
